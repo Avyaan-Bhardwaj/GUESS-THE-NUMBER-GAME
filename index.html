@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+</style>
+</head>
+<body style="background-image:url(https://previews.123rf.com/images/pashabo/pashabo1002/pashabo100200078/6419460-seamless-pattern-simple-numbers-on-blackboard-background.jpg);background-size:100%;background-repeat:no-repeat;font-family:Arial, Helvetica, sans-serif;color:#FFFFFF">
+<center style="background-color:#0000FF">
+<h1>Guess The Number Game</h1>
+<p style="font-size:50px">Guess a number between 1 and 10:</p>
+<input type="number" id="num">
+<button onclick="submit()">Submit Guess</button>
+<p style="font-size:50px" id="result"></p>
+<script>
+function submit()
+
+{var guess=Number(document.getElementById("num").value);
+
+var randomNumber = Math.floor(Math.random() * 10) + 1;
+
+var result=document.getElementById("result");
+
+if (guess<randomNumber)
+{result.innerHTML="❌ Too low! Try again."}
+
+else if (guess>randomNumber)
+{result.innerHTML="❌ Too high! Try again."}
+
+else
+{result.innerHTML="✅ Correct! You guessed the number."}}
+</script>
+</center>
+</body>
+</html>
